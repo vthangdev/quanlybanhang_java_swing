@@ -4,4 +4,4 @@ nhóm có 5 thành viên:
 - Phạm Dgoon - 2050531200116
 - Đoàn Viết Chính - 1811505310404
 - Lê Gia Hân - 2050531200139
-- Quốc Hùng -
+- Nông Quốc Hùng - 2050531200154
