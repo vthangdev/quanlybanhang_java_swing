@@ -5,15 +5,19 @@
  */
 package Trangchu.main;
 
-import DoanhThu.Thongkedoanhthu;
-import Quanlynhanvien.QLNHANVIEN;
-import Quanlysanpham.main_qlsp;
-import Quanlytaikhoan.main.qltk;
+
+
+
 import Trangchu.event.EventMenuSelected;
-import Trangchu.form.Form_Trangchu;
+import Trangchu.form.Form_QuanLySanPham;
+import Trangchu.form.Form_TrangChu;
+import Trangchu.form.Form_qlnv;
+import Trangchu.form.Form_qltk;
+import Trangchu.form.Form_doanhthu;
 
 import java.awt.Color;
 import javax.swing.JComponent;
+import login.SignIn39;
 import login.SignUp39;
 
 /**
@@ -25,46 +29,52 @@ public class Main extends javax.swing.JFrame {
     /**
      * Creates new form 
      */
-    //private Form_QLTK home;
+    private Form_QuanLySanPham qlsp;
+    private Form_TrangChu home;
+    private Form_qlnv qlnv;
+    private Form_qltk qltk;
+    private Form_doanhthu doanhthu;
     
     
-    //private Form_DoanhThu form3;
+    
 
     public Main() {
         initComponents();
         setBackground(new Color(0, 0, 0, 0));
-        //home = new Form_QLTK();
-        
-        
+        qlsp = new Form_QuanLySanPham();
+        home = new Form_TrangChu();
+        qlnv = new Form_qlnv();
+        qltk = new Form_qltk();
+        doanhthu = new Form_doanhthu();
         //form3 = new Form_DoanhThu();
         menu.initMoving(Main.this);
         menu.addEventMenuSelected(new EventMenuSelected() {
             @Override
             public void selected(int index) {
                 if (index == 0) {
-                    //setForm(home);
+                    setForm(home);
                 } else if (index == 1) {
-                    Main.this.setVisible(false);
-                    new qltk().setVisible(true);
+                    
+                    setForm(qltk);
                 } else if (index == 2) {
-                    Main.this.setVisible(false);
-                    new QLNHANVIEN().setVisible(true);
+                   
+                    setForm(qlnv);
                 } else if (index == 3) {
-                    Main.this.setVisible(false);
-                    new main_qlsp().setVisible(true);
+                    
+                    setForm(qlsp);
                 } else if (index == 4) {
-                    Main.this.setVisible(false);
-                    new Thongkedoanhthu().setVisible(true);
+                   
+                    setForm(doanhthu);
                 } else if (index == 5) {
                     Main.this.setVisible(false);
-                    new SignUp39().setVisible(true);
+                    new SignIn39().setVisible(true);
                 } else if (index == 6) {
                     System.exit(0);
                 }
             }
         });
         //  set when system open start with home form
-        setForm(new Form_Trangchu());
+        setForm(new Form_TrangChu());
     }
 
     private void setForm(JComponent com) {
@@ -85,15 +95,12 @@ public class Main extends javax.swing.JFrame {
 
         panelBorder1 = new Trangchu.swing.PanelBorder();
         menu = new Trangchu.component.Menu();
-        header2 = new Trangchu.component.Header();
         mainPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
         panelBorder1.setBackground(new java.awt.Color(242, 242, 242));
-
-        header2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
 
         mainPanel.setOpaque(false);
         mainPanel.setLayout(new java.awt.BorderLayout());
@@ -103,22 +110,14 @@ public class Main extends javax.swing.JFrame {
         panelBorder1Layout.setHorizontalGroup(
             panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBorder1Layout.createSequentialGroup()
-                .addComponent(menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(header2, javax.swing.GroupLayout.DEFAULT_SIZE, 965, Short.MAX_VALUE)
-                    .addGroup(panelBorder1Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
+                .addComponent(menu, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 851, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         panelBorder1Layout.setVerticalGroup(
             panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(menu, javax.swing.GroupLayout.DEFAULT_SIZE, 657, Short.MAX_VALUE)
-            .addGroup(panelBorder1Layout.createSequentialGroup()
-                .addComponent(header2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(menu, javax.swing.GroupLayout.DEFAULT_SIZE, 573, Short.MAX_VALUE)
+            .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -173,7 +172,6 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private Trangchu.component.Header header2;
     private javax.swing.JPanel mainPanel;
     private Trangchu.component.Menu menu;
     private Trangchu.swing.PanelBorder panelBorder1;

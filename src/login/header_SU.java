@@ -23,6 +23,7 @@ public class header_SU extends javax.swing.JPanel {
     }
     
     
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -30,7 +31,6 @@ public class header_SU extends javax.swing.JPanel {
         paneMoving = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         paneMoving.setOpaque(false);
@@ -54,13 +54,6 @@ public class header_SU extends javax.swing.JPanel {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Hãy đăng nhập để tiếp tục");
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login/button_dn.png"))); // NOI18N
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel5MouseClicked(evt);
-            }
-        });
-
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 30)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Welcome Back!");
@@ -78,7 +71,6 @@ public class header_SU extends javax.swing.JPanel {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
-                            .addComponent(jLabel5)
                             .addComponent(jLabel3))
                         .addGap(40, 40, 40))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -98,16 +90,9 @@ public class header_SU extends javax.swing.JPanel {
                         .addComponent(jLabel2)
                         .addGap(18, 18, 18)))
                 .addComponent(jLabel3)
-                .addGap(35, 35, 35)
-                .addComponent(jLabel5)
-                .addGap(0, 143, Short.MAX_VALUE))
+                .addGap(0, 219, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-        this.setVisible(false);
-        new SignIn39().setVisible(true);
-    }//GEN-LAST:event_jLabel5MouseClicked
     
     @Override
     protected void paintChildren(Graphics grphcs) {
@@ -144,7 +129,6 @@ public class header_SU extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel paneMoving;
     // End of variables declaration//GEN-END:variables
 }
