@@ -1,6 +1,6 @@
 package Quanlytaikhoan.component;
 
-package swing;
+
 
 public interface EventTextField {
 
