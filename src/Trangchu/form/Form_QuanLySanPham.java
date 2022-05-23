@@ -10,6 +10,11 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 
+import Quanlysanpham.*;
+import Quanlytaikhoan.component.EventCallBack;
+import Quanlytaikhoan.component.EventTextField;
+
+
 
 public class Form_QuanLySanPham extends javax.swing.JPanel {
 
@@ -38,7 +43,26 @@ public class Form_QuanLySanPham extends javax.swing.JPanel {
         
         SetModelTable(service.getAllUser());
         
-        
+        textFieldAnimation2.addEvent(new EventTextField() {
+            @Override
+            public void onPressed(EventCallBack call) {
+                //  Test
+                try {
+                    for (int i = 1; i <= 100; i++) {
+      
+                        Thread.sleep(10);
+                    }
+                    call.done();
+                } catch (Exception e) {
+                    System.err.println(e);
+                }
+            }
+
+            @Override
+            public void onCancel() {
+
+            }
+        });
     }
     public void SetModelTable(List<sanpham> product) {
         for(sanpham products : product) {
