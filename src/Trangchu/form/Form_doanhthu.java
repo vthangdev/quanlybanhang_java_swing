@@ -29,17 +29,17 @@ public class Form_doanhthu extends javax.swing.JPanel {
 
         jButton5 = new javax.swing.JButton();
         jPanel2_139 = new javax.swing.JPanel();
-        textField1 = new Quanlysanpham.TextField();
-        button1 = new Quanlysanpham.Button();
-        button2 = new Quanlysanpham.Button();
-        button3 = new Quanlysanpham.Button();
-        button4 = new Quanlysanpham.Button();
+        textField1_139 = new Quanlysanpham.TextField();
+        button1_139 = new Quanlysanpham.Button();
+        button2_139 = new Quanlysanpham.Button();
+        button3_139 = new Quanlysanpham.Button();
+        button4_139 = new Quanlysanpham.Button();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jTable1_139 = new javax.swing.JTable();
         jPanel4_139 = new javax.swing.JPanel();
         jLabel3_139 = new javax.swing.JLabel();
         jTextField2_139 = new javax.swing.JTextField();
-        header1 = new doanhthu.header();
+        header1_139 = new doanhthu.header();
 
         jButton5.setText("jButton1");
 
@@ -47,18 +47,18 @@ public class Form_doanhthu extends javax.swing.JPanel {
 
         jPanel2_139.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        textField1.setLabelText("Tìm kiếm theo ngày");
+        textField1_139.setLabelText("Tìm kiếm theo ngày");
 
-        button1.setText("Tìm kiếm");
+        button1_139.setText("Tìm kiếm");
 
-        button2.setText("Refresh");
+        button2_139.setText("Refresh");
 
-        button3.setText("Cancel");
+        button3_139.setText("Cancel");
 
-        button4.setText("Home");
-        button4.addMouseListener(new java.awt.event.MouseAdapter() {
+        button4_139.setText("Home");
+        button4_139.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                button4MouseClicked(evt);
+                button4_139MouseClicked(evt);
             }
         });
 
@@ -70,31 +70,31 @@ public class Form_doanhthu extends javax.swing.JPanel {
                 .addGap(40, 40, 40)
                 .addGroup(jPanel2_139Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2_139Layout.createSequentialGroup()
-                        .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(button1_139, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(50, 50, 50)
-                        .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(button2_139, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(55, 55, 55)
-                        .addComponent(button3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(button3_139, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(43, 43, 43)
-                        .addComponent(button4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(button4_139, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textField1_139, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(349, Short.MAX_VALUE))
         );
         jPanel2_139Layout.setVerticalGroup(
             jPanel2_139Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2_139Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(textField1_139, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2_139Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(button1_139, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button2_139, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button3_139, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button4_139, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTable1_139.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -105,7 +105,7 @@ public class Form_doanhthu extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jTable1_139);
 
         jPanel4_139.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -140,13 +140,13 @@ public class Form_doanhthu extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2_139, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 850, Short.MAX_VALUE)
-            .addComponent(header1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(header1_139, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel4_139, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(header1_139, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2_139, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -156,25 +156,25 @@ public class Form_doanhthu extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void button4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button4MouseClicked
+    private void button4_139MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button4_139MouseClicked
         this.setVisible(false);
        
-    }//GEN-LAST:event_button4MouseClicked
+    }//GEN-LAST:event_button4_139MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private Quanlysanpham.Button button1;
-    private Quanlysanpham.Button button2;
-    private Quanlysanpham.Button button3;
-    private Quanlysanpham.Button button4;
-    private doanhthu.header header1;
+    private Quanlysanpham.Button button1_139;
+    private Quanlysanpham.Button button2_139;
+    private Quanlysanpham.Button button3_139;
+    private Quanlysanpham.Button button4_139;
+    private doanhthu.header header1_139;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel3_139;
     private javax.swing.JPanel jPanel2_139;
     private javax.swing.JPanel jPanel4_139;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable1_139;
     private javax.swing.JTextField jTextField2_139;
-    private Quanlysanpham.TextField textField1;
+    private Quanlysanpham.TextField textField1_139;
     // End of variables declaration//GEN-END:variables
 }
