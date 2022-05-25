@@ -96,13 +96,13 @@ public class Form_doanhthu extends javax.swing.JPanel {
 
         jTable1_139.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "So hoa don", "thoi gian", "ngay hd", "ma KH", "tri gia"
             }
         ));
         jScrollPane1.setViewportView(jTable1_139);
