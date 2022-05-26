@@ -5,6 +5,8 @@
  */
 package Trangchu.form;
 
+import Trangchu.main.Main;
+
 /**
  *
  * @author RAVEN
@@ -29,11 +31,10 @@ public class Form_doanhthu extends javax.swing.JPanel {
 
         jButton5 = new javax.swing.JButton();
         jPanel2_139 = new javax.swing.JPanel();
-        textField1_139 = new Quanlysanpham.TextField();
         button1_139 = new Quanlysanpham.Button();
         button2_139 = new Quanlysanpham.Button();
-        button3_139 = new Quanlysanpham.Button();
         button4_139 = new Quanlysanpham.Button();
+        jTextField139 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1_139 = new javax.swing.JTable();
         jPanel4_139 = new javax.swing.JPanel();
@@ -47,18 +48,31 @@ public class Form_doanhthu extends javax.swing.JPanel {
 
         jPanel2_139.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        textField1_139.setLabelText("Tìm kiếm theo ngày");
-
         button1_139.setText("Tìm kiếm");
 
         button2_139.setText("Refresh");
-
-        button3_139.setText("Cancel");
+        button2_139.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button2_139ActionPerformed(evt);
+            }
+        });
 
         button4_139.setText("Home");
         button4_139.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 button4_139MouseClicked(evt);
+            }
+        });
+        button4_139.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button4_139ActionPerformed(evt);
+            }
+        });
+
+        jTextField139.setBorder(javax.swing.BorderFactory.createTitledBorder("Tìm kiếm theo ngày"));
+        jTextField139.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField139ActionPerformed(evt);
             }
         });
 
@@ -69,27 +83,24 @@ public class Form_doanhthu extends javax.swing.JPanel {
             .addGroup(jPanel2_139Layout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addGroup(jPanel2_139Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField139, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2_139Layout.createSequentialGroup()
                         .addComponent(button1_139, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(50, 50, 50)
                         .addComponent(button2_139, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(55, 55, 55)
-                        .addComponent(button3_139, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(43, 43, 43)
-                        .addComponent(button4_139, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(textField1_139, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(349, Short.MAX_VALUE))
+                        .addGap(52, 52, 52)
+                        .addComponent(button4_139, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2_139Layout.setVerticalGroup(
             jPanel2_139Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2_139Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(textField1_139, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(jTextField139, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2_139Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(button1_139, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(button2_139, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button3_139, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(button4_139, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -158,14 +169,26 @@ public class Form_doanhthu extends javax.swing.JPanel {
 
     private void button4_139MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button4_139MouseClicked
         this.setVisible(false);
-       
+        new Main().setVisible(true);
     }//GEN-LAST:event_button4_139MouseClicked
+
+    private void button4_139ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button4_139ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_button4_139ActionPerformed
+
+    private void button2_139ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2_139ActionPerformed
+        // TODO add your handling code here:
+        jTextField139.setText("");
+    }//GEN-LAST:event_button2_139ActionPerformed
+
+    private void jTextField139ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField139ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField139ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private Quanlysanpham.Button button1_139;
     private Quanlysanpham.Button button2_139;
-    private Quanlysanpham.Button button3_139;
     private Quanlysanpham.Button button4_139;
     private doanhthu.header header1_139;
     private javax.swing.JButton jButton5;
@@ -174,7 +197,7 @@ public class Form_doanhthu extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel4_139;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1_139;
+    private javax.swing.JTextField jTextField139;
     private javax.swing.JTextField jTextField2_139;
-    private Quanlysanpham.TextField textField1_139;
     // End of variables declaration//GEN-END:variables
 }
