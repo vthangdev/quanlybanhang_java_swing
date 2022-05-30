@@ -63,30 +63,82 @@ public class DoanhThuFunctionHandler {
         }
         return null;
     }
+    
+    public List<DoanhThu> getAllDataHoaDonDK(String nBD_54,String nKT_54) {
+        List<DoanhThu> dts_54 = new ArrayList<>();
+        
+        try {
+            Connection conn = JDBCConnection.getJDBCConnection();
+            
+            PreparedStatement ps = conn.prepareStatement("select * from hoa_don where ngay_hd >= ? and ngay_hd <= ?");
+            ps.setString(1, nBD_54);
+            ps.setString(2, nKT_54);
+            ResultSet result = ps.executeQuery();
+            
+            while (result.next()) {
+                DoanhThu dt_54 = new DoanhThu();
+                
+                dt_54.setSoHD_54(result.getString("so_hoa_don"));
+                dt_54.setThoiGian_54(result.getString("thoi_gian"));
+                dt_54.setNgayHD_54(result.getString("ngay_hd"));
+                dt_54.setMaKH_54(result.getString("ma_khach_hang"));
+                dt_54.setMaSP_54(result.getString("ma_san_pham"));
+                dt_54.setSoLuong_54(result.getString("soLuong"));
+                dt_54.setDonGia_54(result.getString("donGia"));
+                
+                dts_54.add(dt_54);
+            }
+            return dts_54;
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return null;
+    }
 
-//    public List<Staff> GetAllStaff() {
-//        List<Staff> staffs = new ArrayList<Staff>();
-//        Connection conn = ConnectSQLServer.ConnectSQL();
-//        
-//        try {
-//            PreparedStatement ps = conn.prepareStatement("select * from Staff");
-//            ResultSet result = ps.executeQuery();
-//            
-//            while (result.next()) {
-//                Staff staff = new Staff();
-//                
-//                staff.setID(result.getString("ID"));
-//                staff.setName(result.getString("name"));
-//                staff.setAddress(result.getString("address"));
-//                staff.setEmail(result.getString("email"));
-//                staff.setPhoneNumber(result.getString("phoneNumber"));
-//                staff.setGender(result.getBoolean("gender"));
-//                
-//                staffs.add(staff);
-//            }
-//        } catch (SQLException ex) {
-//            Logger.getLogger(HandleLogicFunctions.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//        return staffs;
-//    }
+    public List<DoanhThu> GetResultSearch(String searchType_54,String valueSearch_54) {
+        List<DoanhThu> dts_54 = new ArrayList<>();
+        
+        
+        try {
+            Connection conn = JDBCConnection.getJDBCConnection();
+            
+            PreparedStatement ps = null;
+            switch(searchType_54) {
+            case "Năm" : 
+                 ps = conn.prepareStatement("select * from hoa_don where YEAR(ngay_hd) = ?");
+                 ps.setObject(1, valueSearch_54);  
+                break;
+            
+            case "Tháng" : 
+                 ps = conn.prepareStatement("select * from hoa_don where MONTH(ngay_hd) = ?");
+                ps.setObject(1, valueSearch_54);  
+                break;
+             
+            case "Ngày" : 
+                 ps = conn.prepareStatement("select * from hoa_don where DAY(ngay_hd) = ?");
+                ps.setObject(1, valueSearch_54);  
+                break;
+            }
+            
+            ResultSet result = ps.executeQuery();
+            
+            while(result.next()) {
+                DoanhThu dt_54 = new DoanhThu();
+                
+                dt_54.setSoHD_54(result.getString("so_hoa_don"));
+                dt_54.setThoiGian_54(result.getString("thoi_gian"));
+                dt_54.setNgayHD_54(result.getString("ngay_hd"));
+                dt_54.setMaKH_54(result.getString("ma_khach_hang"));
+                dt_54.setMaSP_54(result.getString("ma_san_pham"));
+                dt_54.setSoLuong_54(result.getString("soLuong"));
+                dt_54.setDonGia_54(result.getString("donGia"));
+                
+                dts_54.add(dt_54);
+            }
+            return dts_54;
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return null;
+    }
 }
