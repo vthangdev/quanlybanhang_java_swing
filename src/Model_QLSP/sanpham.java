@@ -9,44 +9,36 @@ package Model_QLSP;
  *
  * @author pc
  */
-public class sanpham {
-    private int idsp;
-    private int idloai;
-    private String tensp;
+public class Sanpham {
+    private int IDSP;
+    private int IDLoai;
+    private String tenSP;
     private int gia;
+    private String anh;
+    private String mota;
 
-    public sanpham() {
+    public int getIDSP() {
+        return IDSP;
     }
 
-    public sanpham(int idsp, int idloai, String tensp, int gia) {
-        this.idsp = idsp;
-        this.idloai = idloai;
-        this.tensp = tensp;
-        this.gia = gia;
+    public void setIDSP(int IDSP) {
+        this.IDSP = IDSP;
     }
 
-    public int getIdsp() {
-        return idsp;
+    public int getIDLoai() {
+        return IDLoai;
     }
 
-    public void setIdsp(int idsp) {
-        this.idsp = idsp;
+    public void setIDLoai(int IDLoai) {
+        this.IDLoai = IDLoai;
     }
 
-    public int getIdloai() {
-        return idloai;
+    public String getTenSP() {
+        return tenSP;
     }
 
-    public void setIdloai(int idloai) {
-        this.idloai = idloai;
-    }
-
-    public String getTensp() {
-        return tensp;
-    }
-
-    public void setTensp(String tensp) {
-        this.tensp = tensp;
+    public void setTenSP(String tenSP) {
+        this.tenSP = tenSP;
     }
 
     public int getGia() {
@@ -57,8 +49,31 @@ public class sanpham {
         this.gia = gia;
     }
 
-    public void addProduct(sanpham product) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String getAnh() {
+        return anh;
     }
-    
+
+    public void setAnh(String anh) {
+        this.anh = anh;
+    }
+
+    public String getMota() {
+        return mota;
+    }
+
+    public void setMota(String mota) {
+        this.mota = mota;
+    }
+
+    public Sanpham(int IDSP, int IDLoai, String tenSP, int gia, String anh, String mota) {
+        this.IDSP = IDSP;
+        this.IDLoai = IDLoai;
+        this.tenSP = tenSP;
+        this.gia = gia;
+        this.anh = anh;
+        this.mota = mota;
+    }
+
+    public Sanpham() {
+    }
 }

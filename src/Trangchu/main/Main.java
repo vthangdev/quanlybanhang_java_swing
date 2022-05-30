@@ -16,9 +16,6 @@ import Trangchu.form.Form_qltk;
 import Trangchu.form.Form_doanhthu;
 
 import java.awt.Color;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JComponent;
 import login.SignIn39;
 import login.SignUp39;
@@ -41,7 +38,7 @@ public class Main extends javax.swing.JFrame {
     
     
 
-    public Main() throws SQLException {
+    public Main() {
         initComponents();
         setBackground(new Color(0, 0, 0, 0));
         qlsp = new Form_QuanLySanPham();
@@ -169,11 +166,7 @@ public class Main extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                try {
-                    new Main().setVisible(true);
-                } catch (SQLException ex) {
-                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                new Main().setVisible(true);
             }
         });
     }
