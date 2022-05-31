@@ -5,7 +5,12 @@
         <group>
             <file>file:/C:/Users/hoten/Downloads/quanlybanhang_java_swing/src/login/SignIn39.java</file>
             <file>file:/C:/Users/hoten/Downloads/quanlybanhang_java_swing/src/Trangchu/main/Main.java</file>
+            <file>file:/C:/Users/hoten/Downloads/quanlybanhang_java_swing/src/Trangchu/form/Form_TrangChu.java</file>
+            <file>file:/C:/Users/hoten/Downloads/quanlybanhang_java_swing/src/Trangchu/form/Form_qltk.java</file>
             <file>file:/C:/Users/hoten/Downloads/quanlybanhang_java_swing/src/login/connection/JDBCConnection.java</file>
+            <file>file:/C:/Users/hoten/Downloads/quanlybanhang_java_swing/src/Trangchu/form/Form_doanhthu.java</file>
+            <file>file:/C:/Users/hoten/Downloads/quanlybanhang_java_swing/src/Trangchu/form/Form_QuanLySanPham.java</file>
+            <file>file:/C:/Users/hoten/Downloads/quanlybanhang_java_swing/src/login/service/ServiceMail.java</file>
         </group>
     </open-files>
 </project-private>
