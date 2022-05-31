@@ -11,12 +11,12 @@ package Trangchu.main;
 import Trangchu.event.EventMenuSelected;
 import Trangchu.form.Form_QuanLySanPham;
 import Trangchu.form.Form_TrangChu;
-import Trangchu.form.Form_qlnv;
 import Trangchu.form.Form_qltk;
 import Trangchu.form.Form_doanhthu;
 
 import java.awt.Color;
 import javax.swing.JComponent;
+import javax.swing.JOptionPane;
 import login.SignIn39;
 import login.SignUp39;
 
@@ -31,7 +31,6 @@ public class Main extends javax.swing.JFrame {
      */
     private Form_QuanLySanPham qlsp;
     private Form_TrangChu home;
-    private Form_qlnv qlnv;
     private Form_qltk qltk;
     private Form_doanhthu doanhthu;
     
@@ -43,7 +42,6 @@ public class Main extends javax.swing.JFrame {
         setBackground(new Color(0, 0, 0, 0));
         qlsp = new Form_QuanLySanPham();
         home = new Form_TrangChu();
-        qlnv = new Form_qlnv();
         qltk = new Form_qltk();
         doanhthu = new Form_doanhthu();
         //form3 = new Form_DoanhThu();
@@ -56,19 +54,21 @@ public class Main extends javax.swing.JFrame {
                 } else if (index == 1) {
                     
                     setForm(qltk);
+                
                 } else if (index == 2) {
-                   
-                    setForm(qlnv);
-                } else if (index == 3) {
                     
                     setForm(qlsp);
-                } else if (index == 4) {
+                } else if (index == 3) {
                    
                     setForm(doanhthu);
+                } else if (index == 4) {
+                    int dangxuat=JOptionPane.showConfirmDialog(rootPane, "Bạn muốn đăng xuất tài khoản này ?","Xác nhận",JOptionPane.YES_NO_OPTION);
+                    if(dangxuat!=JOptionPane.NO_OPTION){
+                        Main.this.setVisible(false);
+                        new SignIn39().setVisible(true);
+                    }
+                    
                 } else if (index == 5) {
-                    Main.this.setVisible(false);
-                    new SignIn39().setVisible(true);
-                } else if (index == 6) {
                     System.exit(0);
                 }
             }
@@ -166,6 +166,7 @@ public class Main extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                new Main().setLocationRelativeTo(null);
                 new Main().setVisible(true);
             }
         });
