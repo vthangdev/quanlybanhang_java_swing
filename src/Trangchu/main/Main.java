@@ -18,7 +18,7 @@ import java.awt.Color;
 import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 import login.SignIn39;
-import login.SignUp39;
+
 
 /**
  *
@@ -98,6 +98,7 @@ public class Main extends javax.swing.JFrame {
         mainPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Trang chủ");
         setUndecorated(true);
 
         panelBorder1.setBackground(new java.awt.Color(242, 242, 242));
