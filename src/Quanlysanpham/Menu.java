@@ -39,7 +39,7 @@ public class Menu extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Thêm sản phẩm");
+        jLabel2.setText("Chi tiết sản phẩm");
 
         javax.swing.GroupLayout paneMovingLayout = new javax.swing.GroupLayout(paneMoving);
         paneMoving.setLayout(paneMovingLayout);

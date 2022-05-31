@@ -6,9 +6,6 @@ package login;
 
 import javax.swing.JOptionPane;
 import Trangchu.main.Main;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -195,7 +192,6 @@ public class SignIn39 extends javax.swing.JFrame {
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txt_name39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_name39ActionPerformed
@@ -213,11 +209,7 @@ public class SignIn39 extends javax.swing.JFrame {
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
           JOptionPane.showMessageDialog(rootPane, "Đăng nhập thành công ^^","Thông báo",JOptionPane.PLAIN_MESSAGE);
           this.setVisible(false);
-        try {
-            new Main().setVisible(true);
-        } catch (SQLException ex) {
-            Logger.getLogger(SignIn39.class.getName()).log(Level.SEVERE, null, ex);
-        }
+          new Main().setVisible(true);
           
     }//GEN-LAST:event_jLabel6MouseClicked
 

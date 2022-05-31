@@ -2,27 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <file>file:/C:/Users/hoten/Downloads/quanlybanhang_java_swing-main/quanlybanhang_java_swing-main/src/Trangchu/form/Form_TrangChu.java</file>
-            <file>file:/C:/Users/hoten/Downloads/quanlybanhang_java_swing-main/quanlybanhang_java_swing-main/src/Trangchu/form/Form_qltk.java</file>
-            <file>file:/C:/Users/hoten/Downloads/quanlybanhang_java_swing-main/quanlybanhang_java_swing-main/src/Trangchu/form/Form_qlnv.java</file>
-            <file>file:/C:/Users/hoten/Downloads/quanlybanhang_java_swing-main/quanlybanhang_java_swing-main/src/Trangchu/main/Main.java</file>
-            <file>file:/C:/Users/hoten/Downloads/quanlybanhang_java_swing-main/quanlybanhang_java_swing-main/src/login/SignUp39.java</file>
-            <file>file:/C:/Users/hoten/Downloads/quanlybanhang_java_swing-main/quanlybanhang_java_swing-main/src/Trangchu/form/Form_doanhthu.java</file>
-            <file>file:/C:/Users/hoten/Downloads/quanlybanhang_java_swing-main/quanlybanhang_java_swing-main/src/login/SignIn39.java</file>
-            <file>file:/C:/Users/hoten/Downloads/quanlybanhang_java_swing-main/quanlybanhang_java_swing-main/src/Trangchu/form/Form_QuanLySanPham.java</file>
-=======
-            <file>file:/D:/codejava/quanlybanhang_java_swing-master/src/Trangchu/form/Form_TrangChu.java</file>
-            <file>file:/D:/codejava/quanlybanhang_java_swing-master/src/Trangchu/form/Form_doanhthu.java</file>
->>>>>>> a929d5c86576be0a0f22db94f8b2ea64af880e6b
-=======
-            <file>file:/D:/codejava/quanlybanhang_java_swing-master/src/Trangchu/form/Form_QuanLySanPham.java</file>
-            <file>file:/D:/codejava/quanlybanhang_java_swing-master/src/Trangchu/form/Form_Chitietsanpham.java</file>
-            <file>file:/D:/codejava/quanlybanhang_java_swing-master/src/Model_QLSP/Chitietsanpham.java</file>
-            <file>file:/D:/codejava/quanlybanhang_java_swing-master/src/DAO_QLSP/ProductManagerment.java</file>
->>>>>>> origin/Crud_quanlysanpham
-        </group>
+        <group/>
     </open-files>
 </project-private>
