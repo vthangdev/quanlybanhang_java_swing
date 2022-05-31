@@ -26,6 +26,7 @@ public class DoanhThuFunctionHandler {
                 
                 years_54.add(y_54);
             }
+            System.out.println("aaaaaaaaaa");
             return years_54;
         } catch (SQLException ex) {
             ex.printStackTrace();
