@@ -5,10 +5,15 @@
  */
 package Trangchu.form;
 
+import Quanlynhanvien.NhanVienModify;
+import Quanlynhanvien.NhanVien_DAO;
 import Quanlytaikhoan.model.KhachhangModify;
 import Quanlytaikhoan.model.khachhang_DAO;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -17,33 +22,49 @@ import javax.swing.table.DefaultTableModel;
  * @author RAVEN
  */
 public class Form_qltk extends javax.swing.JPanel {
-    DefaultTableModel tableModel ;
+
+    DefaultTableModel tableModel;
+    DefaultTableModel tableModelNhanVien;
     /**
      * Creates new form Form_1
      */
-    List <khachhang_DAO> KhachhangList= new ArrayList<>();
-    
-    
-    
+    List<khachhang_DAO> KhachhangList = new ArrayList<>();
+    List<NhanVien_DAO> NhanVienList = new ArrayList<>();
+
     public Form_qltk() {
         initComponents();
-        
+
         tableModel = (DefaultTableModel) tblkhachhang.getModel();
+        tableModelNhanVien = (DefaultTableModel) jTblNV.getModel();
         showKH();
-        
+        showNhanVien();
     }
-    
-    private void showKH(){
-          KhachhangList= KhachhangModify.findAll();
-        
+
+    private void showKH() {
+        KhachhangList = KhachhangModify.findAll();
+
         tableModel.setRowCount(0);
-        
+
         for (khachhang_DAO kh : KhachhangList) {
-            tableModel.addRow(new Object[] {tableModel.getRowCount()+1,kh.getUserName(), kh.getEmail(),
-                kh.getGioi_tinh(),kh.getSo_dien_thoai(),kh.getTuoi()    });
-            
+            tableModel.addRow(new Object[]{tableModel.getRowCount() + 1, kh.getUserName(), kh.getEmail(),
+                kh.getGioi_tinh(), kh.getSo_dien_thoai(), kh.getTuoi()});
+
         }
-        
+
+    }
+
+    private void showNhanVien() {
+        NhanVienList = NhanVienModify.findAll();
+        tableModelNhanVien.setRowCount(0);
+        for (NhanVien_DAO nv : NhanVienList) {
+            if (nv.getGt().equals("1")) {
+                tableModelNhanVien.addRow(new Object[]{nv.getIdnv(), nv.getTennv(),
+                    nv.getEmail(), nv.getSdt(), "Nam"});
+            } else {
+                tableModelNhanVien.addRow(new Object[]{nv.getIdnv(), nv.getTennv(),
+                    nv.getEmail(), nv.getSdt(), "Nữ"});
+            }
+        }
     }
 
     /**
@@ -72,18 +93,18 @@ public class Form_qltk extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         btnreset = new Quanlytaikhoan.component.Button();
         NVPane = new javax.swing.JPanel();
-        textField6 = new Quanlytaikhoan.component.TextField();
-        textField7 = new Quanlytaikhoan.component.TextField();
-        textField8 = new Quanlytaikhoan.component.TextField();
-        textField9 = new Quanlytaikhoan.component.TextField();
-        textField10 = new Quanlytaikhoan.component.TextField();
+        txtIdNV = new Quanlytaikhoan.component.TextField();
+        txtTenNV = new Quanlytaikhoan.component.TextField();
+        txtEmail = new Quanlytaikhoan.component.TextField();
+        txtSDT = new Quanlytaikhoan.component.TextField();
         button6 = new Quanlytaikhoan.component.Button();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        jTblNV = new javax.swing.JTable();
         button8 = new Quanlytaikhoan.component.Button();
         button9 = new Quanlytaikhoan.component.Button();
         button10 = new Quanlytaikhoan.component.Button();
-        textField11 = new Quanlytaikhoan.component.TextField();
+        cbgioitinhNV = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
         panelBorder2 = new Quanlytaikhoan.swing.PanelBorder();
         searchBar_54 = new Quanlytaikhoan.component.TextFieldAnimation();
         comboBoxSuggestion1 = new Quanlytaikhoan.component.ComboBoxSuggestion();
@@ -256,31 +277,39 @@ public class Form_qltk extends javax.swing.JPanel {
 
         NVPane.setOpaque(false);
 
-        textField6.setLabelText("Mật khẩu");
+        txtIdNV.setLabelText("ID Nhân Viên");
 
-        textField7.setLabelText("ID Nhân Viên");
+        txtTenNV.setLabelText("Tên Nhân Viên");
 
-        textField8.setLabelText("Tên Nhân Viên");
+        txtEmail.setLabelText("Email");
 
-        textField9.setLabelText("Email");
-
-        textField10.setLabelText("Số điện thoại");
+        txtSDT.setLabelText("Số điện thoại");
 
         button6.setText("Thêm Tài khoản");
         button6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        button6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button6ActionPerformed(evt);
+            }
+        });
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        jTblNV.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Mã nhân viên", "Tên nhân viên", "Email", "SDT", "Giới tính"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jTblNV.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTblNVMouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(jTblNV);
 
         button8.setText("Sửa");
         button8.setBoderColor(new java.awt.Color(249, 255, 0));
@@ -294,11 +323,18 @@ public class Form_qltk extends javax.swing.JPanel {
         button9.setText("Xoá");
         button9.setBoderColor(new java.awt.Color(204, 0, 0));
         button9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        button9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button9ActionPerformed(evt);
+            }
+        });
 
         button10.setText("Xem chi tiết");
         button10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
-        textField11.setLabelText("Mật khẩu");
+        cbgioitinhNV.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nam", "Nữ", " " }));
+
+        jLabel2.setText("Giới tính");
 
         javax.swing.GroupLayout NVPaneLayout = new javax.swing.GroupLayout(NVPane);
         NVPane.setLayout(NVPaneLayout);
@@ -314,20 +350,22 @@ public class Form_qltk extends javax.swing.JPanel {
                             .addComponent(button8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(button6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(button9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(button10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap(20, Short.MAX_VALUE))
+                            .addComponent(button10, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE))
+                        .addContainerGap(21, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, NVPaneLayout.createSequentialGroup()
                         .addGroup(NVPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(textField6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(textField7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 382, Short.MAX_VALUE)
-                            .addComponent(textField8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(txtIdNV, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 382, Short.MAX_VALUE)
+                            .addComponent(txtTenNV, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(NVPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, NVPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(textField10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE)
-                                .addComponent(textField9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(textField11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 359, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30))))
+                        .addGroup(NVPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txtSDT, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE)
+                            .addComponent(txtEmail, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(30, 30, 30))
+                    .addGroup(NVPaneLayout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(cbgioitinhNV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         NVPaneLayout.setVerticalGroup(
             NVPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -335,20 +373,16 @@ public class Form_qltk extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(NVPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(NVPaneLayout.createSequentialGroup()
-                        .addComponent(textField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtIdNV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(textField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtTenNV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(NVPaneLayout.createSequentialGroup()
-                        .addComponent(textField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(textField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(6, 6, 6)
-                .addGroup(NVPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(NVPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(NVPaneLayout.createSequentialGroup()
-                        .addGap(51, 51, 51)
+                        .addComponent(txtSDT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(NVPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, NVPaneLayout.createSequentialGroup()
+                        .addGap(101, 101, 101)
                         .addComponent(button6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(button8, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -357,8 +391,12 @@ public class Form_qltk extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(button10, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, NVPaneLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                    .addGroup(NVPaneLayout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addGroup(NVPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cbgioitinhNV, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
@@ -624,7 +662,7 @@ public class Form_qltk extends javax.swing.JPanel {
                                 .addComponent(comboBoxSuggestion1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jScrollPane3))
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(detailInfoPane, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(detailInfoPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addContainerGap())
         );
         panelBorder2Layout.setVerticalGroup(
@@ -684,11 +722,38 @@ public class Form_qltk extends javax.swing.JPanel {
     }//GEN-LAST:event_radioButtonCustom7ActionPerformed
 
     private void button8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button8ActionPerformed
-        // TODO add your handling code here:
+        if (txtIdNV.getText().isEmpty()
+                || txtTenNV.getText().isEmpty()
+                || txtSDT.getText().isEmpty()
+                || txtEmail.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Bạn phải nhập thông tin đầy đủ trước khi cập nhật nhân viên!");
+            return;
+        }
+        int idNhanVien = 0;
+        try {
+            idNhanVien = Integer.parseInt(txtIdNV.getText());
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this, "Mã nhân viên phải là một số nguyên!");
+            return;
+        }
+        String tennv = txtTenNV.getText();
+        String gt = cbgioitinhNV.getSelectedItem().toString();
+        String sdt = txtSDT.getText();
+        String email = txtEmail.getText();
+        NhanVien_DAO nv = new NhanVien_DAO(idNhanVien, tennv, email, sdt, gt);
+        try{
+            NhanVienModify.update(nv);
+            JOptionPane.showMessageDialog(this, "Cập nhật nhân viên thành công!");
+            showNhanVien();
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(this, "Cập nhật nhân viên không thành công!");
+        }
+
     }//GEN-LAST:event_button8ActionPerformed
 
     private void btnresetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnresetActionPerformed
-        
+
         txtName.setText("");
         txtmail.setText("");
         txtsdt.setText("");
@@ -698,33 +763,101 @@ public class Form_qltk extends javax.swing.JPanel {
     }//GEN-LAST:event_btnresetActionPerformed
 
     private void btnsaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsaveActionPerformed
-        
+
         String UserName = txtName.getText();
         String Email = txtmail.getText();
-        String gioi_tinh = cbgioitinh.getSelectedItem().toString(); 
-        String so_dien_thoai= txtsdt.getText();
+        String gioi_tinh = cbgioitinh.getSelectedItem().toString();
+        String so_dien_thoai = txtsdt.getText();
         int Tuoi = Integer.parseInt(txttuoi.getText());
         khachhang_DAO kh = new khachhang_DAO(UserName, Email, gioi_tinh, so_dien_thoai, Tuoi);
-        
+
         KhachhangModify.insert(kh);
         showKH();
     }//GEN-LAST:event_btnsaveActionPerformed
 
     private void btndelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndelActionPerformed
-       int selectedIndex = tblkhachhang.getSelectedRow();
-       if(selectedIndex>=0){
-           khachhang_DAO kh = KhachhangList.get(selectedIndex);
-           
+        int selectedIndex = tblkhachhang.getSelectedRow();
+        if (selectedIndex >= 0) {
+            khachhang_DAO kh = KhachhangList.get(selectedIndex);
+
             int option = JOptionPane.showConfirmDialog(this, "Ban co muon xoa?");
             System.out.println("option : " + option);
-            
-            if(option == 0) {
+
+            if (option == 0) {
                 KhachhangModify.delete(kh.getMa_khach_hang());
-                
+
                 showKH();
-           }
-       }
+            }
+        }
     }//GEN-LAST:event_btndelActionPerformed
+
+    private void button6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button6ActionPerformed
+        // TODO add your handling code here:
+        if (txtIdNV.getText().isEmpty()
+                || txtTenNV.getText().isEmpty()
+                || txtEmail.getText().isEmpty()
+                || txtSDT.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Bạn phải nhập thông tin đầy đủ trước khi thêm nhân viên!");
+            return;
+        }
+        int idNhanVien = 0;
+        try {
+            idNhanVien = Integer.parseInt(txtIdNV.getText());
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this, "Mã nhân viên phải là một số nguyên!");
+            return;
+        }
+        for (NhanVien_DAO nv : NhanVienList) {
+            if (nv.getIdnv() == idNhanVien) {
+                JOptionPane.showMessageDialog(this, "Mã nhân viên đã tồn tại!");
+                return;
+            }
+        }
+        String tennv = txtTenNV.getText();
+        String gt = cbgioitinhNV.getSelectedItem().toString();
+        String sdt = txtSDT.getText();
+        String email = txtEmail.getText();
+        NhanVien_DAO nv = new NhanVien_DAO(idNhanVien, tennv, email, sdt, gt);
+        try{
+            NhanVienModify.insert(nv);
+            JOptionPane.showMessageDialog(this, "Thêm nhân viên thành công!");
+            showNhanVien();
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(this, "Thêm nhân viên không thành công!");
+        }
+    }//GEN-LAST:event_button6ActionPerformed
+
+    private void jTblNVMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTblNVMouseClicked
+        try {
+            int row = jTblNV.getSelectedRow();
+            txtIdNV.setText((jTblNV.getModel().getValueAt(row, 0).toString()));
+            txtTenNV.setText((jTblNV.getModel().getValueAt(row, 1).toString()));
+            txtEmail.setText((jTblNV.getModel().getValueAt(row, 2).toString()));
+            txtSDT.setText((jTblNV.getModel().getValueAt(row, 3).toString()));
+            cbgioitinhNV.setSelectedItem((jTblNV.getModel().getValueAt(row, 4).toString()));
+        } catch (Exception ex) {
+        }
+    }//GEN-LAST:event_jTblNVMouseClicked
+
+    private void button9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button9ActionPerformed
+        // TODO add your handling code here:                                  
+        if (txtIdNV.getText() == null || txtIdNV.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Bạn phải chọn nhân viên trước khi xoá!");
+            return;
+        }
+        int dialogButton = JOptionPane.YES_NO_OPTION;
+        int dialogResult = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn xoá nhân viên này không?", "Thông báo", dialogButton);
+        if (dialogResult == 0) {
+            try {
+                NhanVienModify.delete(Integer.parseInt(txtIdNV.getText()));
+                JOptionPane.showMessageDialog(this, "Xóa nhân viên thành công!");
+                showNhanVien();
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(this, "Xóa nhân viên không thành công!");
+            }
+        }
+    }//GEN-LAST:event_button9ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -743,6 +876,7 @@ public class Form_qltk extends javax.swing.JPanel {
     private Quanlytaikhoan.component.Button button8;
     private Quanlytaikhoan.component.Button button9;
     private javax.swing.JComboBox<String> cbgioitinh;
+    private javax.swing.JComboBox<String> cbgioitinhNV;
     private Quanlytaikhoan.component.ComboBoxSuggestion comboBoxSuggestion1;
     private Quanlytaikhoan.swing.PanelBorder detailInfoKHPane;
     private Quanlytaikhoan.swing.PanelBorder detailInfoNVPane;
@@ -755,6 +889,7 @@ public class Form_qltk extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -764,8 +899,8 @@ public class Form_qltk extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
+    private javax.swing.JTable jTblNV;
     private Quanlytaikhoan.component.MaterialTabbed materialTabbed1;
     private Quanlytaikhoan.component.Menu menu1;
     private Quanlytaikhoan.swing.PanelBorder panelBorder1;
@@ -776,12 +911,6 @@ public class Form_qltk extends javax.swing.JPanel {
     private Quanlytaikhoan.component.RadioButtonCustom radioButtonCustom8;
     private Quanlytaikhoan.component.TextFieldAnimation searchBar_54;
     private javax.swing.JTable tblkhachhang;
-    private Quanlytaikhoan.component.TextField textField10;
-    private Quanlytaikhoan.component.TextField textField11;
-    private Quanlytaikhoan.component.TextField textField6;
-    private Quanlytaikhoan.component.TextField textField7;
-    private Quanlytaikhoan.component.TextField textField8;
-    private Quanlytaikhoan.component.TextField textField9;
     private Quanlytaikhoan.component.TextFieldSuggestion textFieldSuggestion1;
     private Quanlytaikhoan.component.TextFieldSuggestion textFieldSuggestion10;
     private Quanlytaikhoan.component.TextFieldSuggestion textFieldSuggestion2;
@@ -792,7 +921,11 @@ public class Form_qltk extends javax.swing.JPanel {
     private Quanlytaikhoan.component.TextFieldSuggestion textFieldSuggestion7;
     private Quanlytaikhoan.component.TextFieldSuggestion textFieldSuggestion8;
     private Quanlytaikhoan.component.TextFieldSuggestion textFieldSuggestion9;
+    private Quanlytaikhoan.component.TextField txtEmail;
+    private Quanlytaikhoan.component.TextField txtIdNV;
     private Quanlytaikhoan.component.TextField txtName;
+    private Quanlytaikhoan.component.TextField txtSDT;
+    private Quanlytaikhoan.component.TextField txtTenNV;
     private Quanlytaikhoan.component.TextField txtmail;
     private Quanlytaikhoan.component.TextField txtsdt;
     private Quanlytaikhoan.component.TextField txttuoi;
