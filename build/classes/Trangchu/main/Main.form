@@ -36,6 +36,11 @@
   </Layout>
   <SubComponents>
     <Container class="Trangchu.swing.PanelBorder" name="panelBorder1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="f2" green="f2" red="f2" type="rgb"/>
+        </Property>
+      </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
@@ -55,7 +60,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="Trangchu.component.Menu" name="menu">
+        <Component class="Trangchu.component.Menu_TC" name="menu">
         </Component>
         <Container class="javax.swing.JPanel" name="mainPanel">
           <Properties>
