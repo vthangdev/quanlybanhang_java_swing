@@ -63,7 +63,7 @@ public class Form_qlnv extends javax.swing.JPanel {
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jButtonDelete1 = new javax.swing.JButton();
-        menu2 = new Quanlynhanvien.Menu();
+        menu2 = new Quanlynhanvien.Menu_QLNV();
 
         jButton5.setText("jButton1");
 
@@ -666,7 +666,7 @@ public class Form_qlnv extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableTTNV;
-    private Quanlynhanvien.Menu menu2;
+    private Quanlynhanvien.Menu_QLNV menu2;
     private Quanlysanpham.PanelBorder panelBorder1;
     // End of variables declaration//GEN-END:variables
 }

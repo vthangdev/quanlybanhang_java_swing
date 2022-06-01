@@ -67,7 +67,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="materialTabbed1" alignment="0" pref="850" max="32767" attributes="0"/>
+                  <Component id="materialTabbed1" alignment="0" max="32767" attributes="0"/>
                   <Component id="menu1" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
@@ -113,153 +113,109 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jScrollPane1" min="-2" pref="618" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                  <Component id="button4" max="32767" attributes="0"/>
-                                                  <Component id="button5" pref="121" max="32767" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="531" max="-2" attributes="0"/>
-                                              <Component id="button2" min="-2" pref="99" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                  <Component id="button3" max="32767" attributes="0"/>
-                                                  <Component id="button1" max="32767" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                      </Group>
-                                      <EmptySpace min="0" pref="76" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="textField1" min="-2" pref="333" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jLabel2" min="-2" pref="61" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="radioButtonCustom1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="radioButtonCustom2" min="-2" max="-2" attributes="0"/>
-                                          <Component id="textField5" alignment="0" pref="323" max="32767" attributes="0"/>
-                                          <Component id="textField4" alignment="0" max="32767" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="textField2" min="-2" pref="353" max="-2" attributes="0"/>
-                                  <Component id="textField3" min="-2" pref="353" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="jScrollPane1" max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btndel" alignment="1" min="-2" pref="121" max="-2" attributes="0"/>
+                                          <Component id="btnsave" alignment="1" min="-2" pref="121" max="-2" attributes="0"/>
+                                          <Component id="btnreset" min="-2" pref="121" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <Component id="jLabel1" min="-2" pref="64" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="cbgioitinh" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="360" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="txtmail" max="32767" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="txtName" min="-2" pref="353" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="txtsdt" min="-2" pref="323" max="-2" attributes="0"/>
+                                              <EmptySpace pref="8" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Component id="txttuoi" min="-2" pref="323" max="-2" attributes="0"/>
+                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace pref="27" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="textField2" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                                  <Component id="textField4" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="txtName" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtsdt" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="textField3" min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="textField5" pref="0" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="textField1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="radioButtonCustom1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="radioButtonCustom2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="button2" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                          <Component id="button1" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace pref="59" max="32767" attributes="0"/>
-                                      <Component id="jScrollPane1" min="-2" pref="203" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                                  <Component id="txtmail" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txttuoi" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel1" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                  <Component id="cbgioitinh" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+                                      <Component id="btnreset" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="btndel" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="btnsave" min="-2" pref="31" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-                                      <Component id="button3" min="-2" pref="31" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="button4" min="-2" pref="31" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-                                      <Component id="button5" min="-2" pref="31" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane1" min="-2" pref="235" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
+                              <EmptySpace pref="40" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="Quanlytaikhoan.component.TextField" name="textField1">
+                    <Component class="Quanlytaikhoan.component.TextField" name="txttuoi">
                       <Properties>
-                        <Property name="labelText" type="java.lang.String" value="M&#x1ead;t kh&#x1ea9;u"/>
+                        <Property name="labelText" type="java.lang.String" value="Tu&#x1ed5;i"/>
                       </Properties>
                     </Component>
-                    <Component class="Quanlytaikhoan.component.TextField" name="textField2">
+                    <Component class="Quanlytaikhoan.component.TextField" name="txtName">
                       <Properties>
-                        <Property name="labelText" type="java.lang.String" value="ID Kh&#xe1;ch H&#xe0;ng"/>
+                        <Property name="labelText" type="java.lang.String" value="T&#xea;n kh&#xe1;ch h&#xe0;ng"/>
                       </Properties>
                     </Component>
-                    <Component class="Quanlytaikhoan.component.TextField" name="textField3">
-                      <Properties>
-                        <Property name="labelText" type="java.lang.String" value="T&#xea;n Kh&#xe1;ch h&#xe0;ng"/>
-                      </Properties>
-                    </Component>
-                    <Component class="Quanlytaikhoan.component.TextField" name="textField4">
+                    <Component class="Quanlytaikhoan.component.TextField" name="txtmail">
                       <Properties>
                         <Property name="labelText" type="java.lang.String" value="Email"/>
                       </Properties>
                     </Component>
-                    <Component class="Quanlytaikhoan.component.TextField" name="textField5">
+                    <Component class="Quanlytaikhoan.component.TextField" name="txtsdt">
                       <Properties>
                         <Property name="labelText" type="java.lang.String" value="S&#x1ed1; &#x111;i&#x1ec7;n tho&#x1ea1;i"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel2">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Gi&#x1edb;i T&#xed;nh :"/>
-                      </Properties>
-                    </Component>
-                    <Component class="Quanlytaikhoan.component.RadioButtonCustom" name="radioButtonCustom1">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Nam"/>
-                      </Properties>
-                    </Component>
-                    <Component class="Quanlytaikhoan.component.RadioButtonCustom" name="radioButtonCustom2">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="N&#x1eef;"/>
-                      </Properties>
-                    </Component>
-                    <Component class="Quanlytaikhoan.component.Button" name="button1">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Th&#xea;m T&#xe0;i kho&#x1ea3;n"/>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Segoe UI" size="12" style="1"/>
-                        </Property>
-                      </Properties>
-                    </Component>
-                    <Component class="Quanlytaikhoan.component.Button" name="button2">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Xo&#xe1; "/>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Segoe UI" size="12" style="1"/>
-                        </Property>
                       </Properties>
                     </Component>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -269,32 +225,60 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTable" name="jTable1">
+                        <Component class="javax.swing.JTable" name="tblkhachhang">
                           <Properties>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                              <Table columnCount="4" rowCount="4">
-                                <Column editable="true" title="Title 1" type="java.lang.Object"/>
-                                <Column editable="true" title="Title 2" type="java.lang.Object"/>
-                                <Column editable="true" title="Title 3" type="java.lang.Object"/>
-                                <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                              <Table columnCount="6" rowCount="0">
+                                <Column editable="true" title="M&#xe3; kh&#xe1;ch h&#xe0;ng" type="java.lang.Object"/>
+                                <Column editable="true" title="T&#xea;n" type="java.lang.Object"/>
+                                <Column editable="true" title="Email" type="java.lang.Object"/>
+                                <Column editable="true" title="Gi&#x1edb;i t&#xed;nh" type="java.lang.Object"/>
+                                <Column editable="true" title="SDT" type="java.lang.Object"/>
+                                <Column editable="true" title="Tu&#x1ed5;i" type="java.lang.Object"/>
                               </Table>
+                            </Property>
+                            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                              <TableColumnModel selectionModel="0">
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
+                              </TableColumnModel>
+                            </Property>
+                            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                              <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                             </Property>
                           </Properties>
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="Quanlytaikhoan.component.Button" name="button3">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="S&#x1eed;a"/>
-                        <Property name="boderColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="0" green="ff" red="f9" type="rgb"/>
-                        </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Segoe UI" size="12" style="1"/>
-                        </Property>
-                      </Properties>
-                    </Component>
-                    <Component class="Quanlytaikhoan.component.Button" name="button4">
+                    <Component class="Quanlytaikhoan.component.Button" name="btndel">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Xo&#xe1;"/>
                         <Property name="boderColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -304,14 +288,50 @@
                           <Font name="Segoe UI" size="12" style="1"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btndelActionPerformed"/>
+                      </Events>
                     </Component>
-                    <Component class="Quanlytaikhoan.component.Button" name="button5">
+                    <Component class="Quanlytaikhoan.component.Button" name="btnsave">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Xem chi ti&#x1ebf;t"/>
+                        <Property name="text" type="java.lang.String" value="L&#x1b0;u"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="12" style="1"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnsaveActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="cbgioitinh">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="Nam"/>
+                            <StringItem index="1" value="N&#x1eef;"/>
+                            <StringItem index="2" value=" "/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel1">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Gi&#x1edb;i t&#xed;nh"/>
+                      </Properties>
+                    </Component>
+                    <Component class="Quanlytaikhoan.component.Button" name="btnreset">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Reset"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Segoe UI" size="12" style="1"/>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnresetActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -335,43 +355,28 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jScrollPane2" min="-2" pref="680" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="button8" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="button9" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="button10" alignment="0" max="32767" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="button8" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="button6" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="button9" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="button10" alignment="1" max="32767" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                      <EmptySpace pref="20" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                                              <Component id="jLabel3" min="-2" pref="61" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="radioButtonCustom3" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                                              <Component id="radioButtonCustom4" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="button7" min="-2" pref="98" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                                              <Component id="button6" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="textField6" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="textField7" alignment="0" pref="382" max="32767" attributes="0"/>
+                                          <Component id="textField8" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" alignment="1" groupAlignment="1" max="-2" attributes="0">
+                                              <Component id="textField10" alignment="0" pref="359" max="32767" attributes="0"/>
+                                              <Component id="textField9" alignment="0" max="32767" attributes="0"/>
                                           </Group>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                  <Component id="textField6" alignment="1" max="32767" attributes="0"/>
-                                                  <Component id="textField7" alignment="0" pref="382" max="32767" attributes="0"/>
-                                                  <Component id="textField8" alignment="0" max="32767" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Group type="103" alignment="1" groupAlignment="1" max="-2" attributes="0">
-                                                      <Component id="textField10" alignment="0" pref="359" max="32767" attributes="0"/>
-                                                      <Component id="textField9" alignment="0" max="32767" attributes="0"/>
-                                                  </Group>
-                                                  <Component id="textField11" alignment="1" min="-2" pref="359" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
+                                          <Component id="textField11" alignment="1" min="-2" pref="359" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                                   </Group>
@@ -400,17 +405,11 @@
                                   <Component id="textField6" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="textField11" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="button7" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="jLabel3" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                  <Component id="radioButtonCustom3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="radioButtonCustom4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="button6" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                              </Group>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                                      <Component id="button6" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="button8" min="-2" pref="31" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="button9" min="-2" pref="31" max="-2" attributes="0"/>
@@ -419,7 +418,7 @@
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="44" max="32767" attributes="0"/>
                                       <Component id="jScrollPane2" min="-2" pref="225" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -453,32 +452,9 @@
                         <Property name="labelText" type="java.lang.String" value="S&#x1ed1; &#x111;i&#x1ec7;n tho&#x1ea1;i"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel3">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Gi&#x1edb;i T&#xed;nh :"/>
-                      </Properties>
-                    </Component>
-                    <Component class="Quanlytaikhoan.component.RadioButtonCustom" name="radioButtonCustom3">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Nam"/>
-                      </Properties>
-                    </Component>
-                    <Component class="Quanlytaikhoan.component.RadioButtonCustom" name="radioButtonCustom4">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="N&#x1eef;"/>
-                      </Properties>
-                    </Component>
                     <Component class="Quanlytaikhoan.component.Button" name="button6">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Th&#xea;m T&#xe0;i kho&#x1ea3;n"/>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Segoe UI" size="12" style="1"/>
-                        </Property>
-                      </Properties>
-                    </Component>
-                    <Component class="Quanlytaikhoan.component.Button" name="button7">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Xo&#xe1; "/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="12" style="1"/>
                         </Property>
@@ -515,6 +491,9 @@
                           <Font name="Segoe UI" size="12" style="1"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button8ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="Quanlytaikhoan.component.Button" name="button9">
                       <Properties>

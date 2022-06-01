@@ -815,7 +815,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="Quanlynhanvien.Menu" name="menu2">
+        <Component class="Quanlynhanvien.Menu_QLNV" name="menu2">
         </Component>
       </SubComponents>
     </Container>

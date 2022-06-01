@@ -60,7 +60,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="Trangchu.component.Menu" name="menu">
+        <Component class="Trangchu.component.Menu_TC" name="menu">
         </Component>
         <Container class="javax.swing.JPanel" name="mainPanel">
           <Properties>

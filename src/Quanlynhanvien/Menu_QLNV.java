@@ -13,10 +13,10 @@ import java.awt.event.MouseMotionAdapter;
 import javax.swing.JFrame;
 
 
-public class Menu extends javax.swing.JPanel {
+public class Menu_QLNV extends javax.swing.JPanel {
 
     
-    public Menu() {
+    public Menu_QLNV() {
         initComponents();
         setOpaque(false);
     }

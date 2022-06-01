@@ -12,7 +12,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import javax.swing.JFrame;
 
-public class Menu extends javax.swing.JPanel {
+public class Menu_TC extends javax.swing.JPanel {
 
     private EventMenuSelected event;
 
@@ -21,7 +21,7 @@ public class Menu extends javax.swing.JPanel {
         listMenu1.addEventMenuSelected(event);
     }
 
-    public Menu() {
+    public Menu_TC() {
         initComponents();
         setOpaque(false);
         listMenu1.setOpaque(false);
