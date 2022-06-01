@@ -53,7 +53,6 @@ public class Form_QuanLySanPham extends javax.swing.JPanel {
         defaultTableModel.addColumn("TenSP");
         defaultTableModel.addColumn("Gia");
         defaultTableModel.addColumn("Mota");
-        defaultTableModel.addColumn("Anh");
 
         setProductTableData(services.getAllSanpham());
 
@@ -61,7 +60,7 @@ public class Form_QuanLySanPham extends javax.swing.JPanel {
 
     private void setProductTableData(List<Sanpham> sanpham) {
         for (Sanpham sp : sanpham) {
-            defaultTableModel.addRow(new Object[]{sp.getIDSP(), sp.getIDLoai(), sp.getTenSP(), sp.getGia(), sp.getMota(), sp.getAnh()});
+            defaultTableModel.addRow(new Object[]{sp.getIDSP(), sp.getIDLoai(), sp.getTenSP(), sp.getGia(), sp.getMota()});
         }
 
         dgoon_productTable.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
@@ -365,7 +364,6 @@ public class Form_QuanLySanPham extends javax.swing.JPanel {
             sanpham.setIDLoai(Integer.valueOf(dgoon_txtIDLoai.getText()));
             sanpham.setTenSP(dgoon_txtTenSP.getText());
             sanpham.setGia(Integer.valueOf(dgoon_txtGia.getText()));
-            sanpham.setAnh(duongdananh);
             sanpham.setMota(dgoon_txtMota.getText());
 
             services.addSanpham(sanpham);
@@ -382,7 +380,7 @@ public class Form_QuanLySanPham extends javax.swing.JPanel {
         List<Sanpham> sanpham = services.getAllSanpham();
 
         for (Sanpham sp : sanpham) {
-            defaultTableModel.addRow(new Object[]{sp.getIDSP(), sp.getIDLoai(), sp.getTenSP(), sp.getGia(), sp.getMota(), sp.getAnh()});
+            defaultTableModel.addRow(new Object[]{sp.getIDSP(), sp.getIDLoai(), sp.getTenSP(), sp.getGia(), sp.getMota()});
         }
     }//GEN-LAST:event_dgoon_btnRefreshActionPerformed
 
@@ -461,7 +459,6 @@ public class Form_QuanLySanPham extends javax.swing.JPanel {
                 data.add(rs.getString("ten_san_pham"));
                 data.add(rs.getInt("gia"));
                 data.add(rs.getString("Mo_ta"));
-                data.add(rs.getString("Hinhanh"));
 
                 // Thêm một dòng vào table model
                 defaultTableModel.addRow(data);

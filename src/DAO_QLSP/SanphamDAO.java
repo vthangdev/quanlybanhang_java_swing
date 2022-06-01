@@ -33,7 +33,6 @@ public class SanphamDAO {
                 sv.setIDLoai(rs.getInt("ma_loai"));
                 sv.setTenSP(rs.getString("ten_san_pham"));
                 sv.setGia(rs.getInt("gia"));
-                sv.setAnh(rs.getString("Hinhanh"));
                 sv.setMota(rs.getString("Mo_ta"));
                 sanpham.add(sv);
             }
@@ -57,7 +56,6 @@ public class SanphamDAO {
                 sv.setIDLoai(rs.getInt("ma_loai"));
                 sv.setTenSP(rs.getString("ten_san_pham"));
                 sv.setGia(rs.getInt("gia"));
-                sv.setAnh(rs.getString("Hinhanh"));
                 sv.setMota(rs.getString("Mo_ta"));
 
                 return sv;
@@ -70,16 +68,15 @@ public class SanphamDAO {
 
     public void addSP(Sanpham sanpham) {
         Connection connection = Connect.getJDBCConection();
-        String sql = " INSERT INTO san_pham( ma_san_pham, ma_loai, ten_san_pham, gia, Hinhanh,Mo_ta)"
-                + " VALUE(?,?,?,?,?,?) ";
+        String sql = " INSERT INTO san_pham( ma_san_pham, ma_loai, ten_san_pham, gia,Mo_ta)"
+                + " VALUE(?,?,?,?,?) ";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, sanpham.getIDSP());
             preparedStatement.setInt(2, sanpham.getIDLoai());
             preparedStatement.setString(3, sanpham.getTenSP());
             preparedStatement.setInt(4, sanpham.getGia());
-            preparedStatement.setString(5, sanpham.getAnh());
-            preparedStatement.setString(6, sanpham.getMota());
+            preparedStatement.setString(5, sanpham.getMota());
             int rs = preparedStatement.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
@@ -96,8 +93,7 @@ public class SanphamDAO {
             preparedStatement.setString(2, sanpham.getTenSP());
             preparedStatement.setInt(3, sanpham.getGia());
             preparedStatement.setString(4, sanpham.getMota());
-            preparedStatement.setString(5, sanpham.getAnh());
-            preparedStatement.setInt(6, sanpham.getIDSP());
+            preparedStatement.setInt(5, sanpham.getIDSP());
             int rs = preparedStatement.executeUpdate();
             System.out.println(rs);
         } catch (Exception e) {
