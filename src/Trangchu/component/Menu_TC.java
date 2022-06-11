@@ -30,7 +30,7 @@ public class Menu_TC extends javax.swing.JPanel {
 
     private void init() {
         listMenu1.addItem(new Model_Menu("1", "Trang chủ", Model_Menu.MenuType.MENU));
-        listMenu1.addItem(new Model_Menu("2", "Quản lý tài khoản", Model_Menu.MenuType.MENU));
+        listMenu1.addItem(new Model_Menu("2", "Quản lý thông tin tài khoản", Model_Menu.MenuType.MENU));
         
         listMenu1.addItem(new Model_Menu("3", "Quản lý sản phẩm", Model_Menu.MenuType.MENU));
         listMenu1.addItem(new Model_Menu("4", "Doanh thu", Model_Menu.MenuType.MENU));

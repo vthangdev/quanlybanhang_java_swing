@@ -21,7 +21,7 @@ public class ServiceMail {
         prop.put("mail.smtp.auth", "true");
         prop.put("mail.smtp.starttls.enable", "true");
         String username = "hotenlvt@gmail.com";
-        String password = "Matkhaulathang1@";    //  email + pass o day
+        String password = "xxx";    //mat khau ung dung
         Session session = Session.getInstance(prop, new javax.mail.Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {

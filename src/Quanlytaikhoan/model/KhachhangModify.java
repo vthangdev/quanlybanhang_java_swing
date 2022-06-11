@@ -126,13 +126,13 @@ public static void  update(khachhang_DAO kh) {
             String  sql= "update info_user set  UserName=?, Email=?, gioi_tinh=?, so_dien_thoai=?, Tuoi=? where ma_khach_hang=? ";
             statement=  connection.prepareCall(sql);
             
+            statement.setInt(1, kh.getMa_khach_hang());
+            statement.setString(2, kh.getUserName());
+            statement.setString(3, kh.getEmail());
+            statement.setString(4, kh.getGioi_tinh());
+            statement.setString(5, kh.getSo_dien_thoai());
+            statement.setInt(6, kh.getTuoi());
             
-            statement.setString(1, kh.getUserName());
-            statement.setString(2, kh.getEmail());
-            statement.setString(3, kh.getGioi_tinh());
-            statement.setString(4, kh.getSo_dien_thoai());
-            statement.setInt(5, kh.getTuoi());
-            statement.setInt(6, kh.getMa_khach_hang());
             
             statement.execute();
            
